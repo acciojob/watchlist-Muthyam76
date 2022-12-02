@@ -10,18 +10,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("movies")
-public class movieController {
+public class MovieController {
     @Autowired
-    movieService movieServices;
+    MovieService movieServices;
 
     @PostMapping("/add-movie")
-    public ResponseEntity<String>addMovie(@RequestBody movie movie){
+    public ResponseEntity<String>addMovie(@RequestBody Movie movie){
         movieServices.addMovie(movie);
         return new ResponseEntity<>("new movie added successfully", HttpStatus.CREATED);
 
     }
     @PostMapping("/add-director")
-    public ResponseEntity<String>addDirector(@RequestBody director director){
+    public ResponseEntity<String>addDirector(@RequestBody Director director){
         movieServices.addDirector(director);
         return new ResponseEntity<>("new director added successfully", HttpStatus.CREATED);
 
@@ -34,14 +34,14 @@ public class movieController {
     }
 
     @GetMapping("/get-movie-by-name/{name}")
-    public ResponseEntity<movie> getMovieByName(@PathVariable String name){
-        movie movies = movieServices.findMovie(name);
+    public ResponseEntity<Movie> getMovieByName(@PathVariable String name){
+        Movie movies = movieServices.findMovie(name);
         return new ResponseEntity<>(movies, HttpStatus.CREATED);
     }
 
     @GetMapping("/get-director-by-name/{name}")
-    public ResponseEntity<director> getDirectorByName(@PathVariable String name){
-        director directors = movieServices.findDirector(name);
+    public ResponseEntity<Director> getDirectorByName(@PathVariable String name){
+        Director directors = movieServices.findDirector(name);
         return new ResponseEntity<>(directors, HttpStatus.CREATED);
     }
 

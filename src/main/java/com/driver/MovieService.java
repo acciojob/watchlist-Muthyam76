@@ -6,16 +6,16 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class movieService {
+public class MovieService {
     @Autowired
-    movieRepository movieRepositorys;
+    MovieRepository movieRepositorys;
 
 
-    public void addMovie(movie movie) {
+    public void addMovie(Movie movie) {
         movieRepositorys.saveMovie(movie);
     }
 
-    public void addDirector(director director) {
+    public void addDirector(Director director) {
         movieRepositorys.saveDirector(director);
     }
 
@@ -23,11 +23,11 @@ public class movieService {
         movieRepositorys.saveMovieDirectorPair(movie,director);
 
     }
-    public movie findMovie(String movieName){
+    public Movie findMovie(String movieName){
         return movieRepositorys.findMovie(movieName);
     }
 
-    public director findDirector(String directorName){
+    public Director findDirector(String directorName){
         return movieRepositorys.findDirector(directorName);
     }
 

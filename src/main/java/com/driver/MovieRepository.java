@@ -8,20 +8,20 @@ import java.util.HashSet;
 import java.util.List;
 
 @Repository
-public class movieRepository {
-    private HashMap<String,movie>movieMap;
-    private HashMap<String,director> directorMap;
+public class MovieRepository {
+    private HashMap<String,Movie>movieMap;
+    private HashMap<String,Director> directorMap;
     private HashMap<String, List<String>>directorMovieMap;
 
-    public movieRepository() {
-        this.movieMap=new HashMap<String,movie>();
-        this.directorMap=new HashMap<String,director>();
+    public MovieRepository() {
+        this.movieMap=new HashMap<String,Movie>();
+        this.directorMap=new HashMap<String,Director>();
         this.directorMovieMap=new HashMap<String,List<String>>();
     }
-    public void saveMovie(movie movie){
+    public void saveMovie(Movie movie){
         movieMap.put(movie.getName(),movie);
     }
-    public void saveDirector(director director){
+    public void saveDirector(Director director){
         directorMap.put(director.getName(),director);
     }
 
@@ -35,11 +35,11 @@ public class movieRepository {
             directorMovieMap.put(director, currentMovies);
         }
     }
-    public movie findMovie(String movie){
+    public Movie findMovie(String movie){
         return movieMap.get(movie);
     }
 
-    public director findDirector(String director){
+    public Director findDirector(String director){
         return directorMap.get(director);
     }
 

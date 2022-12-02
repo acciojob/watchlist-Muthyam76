@@ -1,14 +1,14 @@
 package com.driver;
 
-public class director {
+public class Director {
     private String name;
     private int numberOfMovies;
     private double imbdRating;
 
-    public director() {
+    public Director() {
     }
 
-    public director(String name,int numberOfMovies,double imbdRating) {
+    public Director(String name,int numberOfMovies,double imbdRating) {
         this.name = name;
         this.numberOfMovies=numberOfMovies;
         this.imbdRating=imbdRating;
