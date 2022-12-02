@@ -34,7 +34,7 @@ public class Movie {
         this.durationInMinutes = durationInMinutes;
     }
 
-    public void setImbdRating(double imbdRating) {
-        this.imdbRating = imbdRating;
+    public void setImbdRating(double imdbRating) {
+        this.imdbRating = imdbRating;
     }
 }

@@ -35,7 +35,7 @@ public class Director {
     }
 
     public void setImbdRating(double imbdRating) {
-        this.imdbRating = imbdRating;
+        this.imdbRating = imdbRating;
     }
 
 }
