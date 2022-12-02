@@ -22,7 +22,7 @@ public class Movie {
         return durationInMinutes;
     }
 
-    public double getImbdRating() {
+    public double getImdbRating() {
         return imdbRating;
     }
 
@@ -34,7 +34,7 @@ public class Movie {
         this.durationInMinutes = durationInMinutes;
     }
 
-    public void setImbdRating(double imdbRating) {
+    public void setImdbRating(double imdbRating) {
         this.imdbRating = imdbRating;
     }
 }

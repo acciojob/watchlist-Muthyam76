@@ -22,7 +22,7 @@ public class Director {
         return numberOfMovies;
     }
 
-    public double getImddRating() {
+    public double getImdbRating() {
         return imdbRating;
     }
 
@@ -34,7 +34,7 @@ public class Director {
         this.numberOfMovies = numberOfMovies;
     }
 
-    public void setImbdRating(double imbdRating) {
+    public void setImdbRating(double imdbRating) {
         this.imdbRating = imdbRating;
     }
 
