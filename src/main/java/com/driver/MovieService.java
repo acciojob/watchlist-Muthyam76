@@ -45,4 +45,10 @@ public class MovieService {
         movieRepositorys.deleteAllDirector();
     }
 
+
+    //live api building
+    public String getDirectorName(String movie){
+        return movieRepositorys.getDirectorOfMovie(movie);
+    }
+
 }

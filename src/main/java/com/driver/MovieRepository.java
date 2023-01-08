@@ -1,6 +1,8 @@
 package com.driver;
 
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -85,4 +87,14 @@ public class MovieRepository {
             }
         }
     }
+    //live api
+    public String getDirectorOfMovie(String movie){
+        HashSet<String> moviesSet = new HashSet<String>();
+        for(String director: directorMovieMap.keySet()){
+            if(directorMovieMap.get(director).contains(movie))
+                return director;
+        }
+        return "NoMovieSuchFound";
+    }
+
 }
